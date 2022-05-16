@@ -1,0 +1,9 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:EAppBase.Gui"
+    xmlns:FanMain="clr-namespace:EAppBase.Gui.Fan.Main">
+    <Style  TargetType="{x:Type local:FanBase}">
+        <Setter Property="WindowStyle" Value="None"/>
+    </Style>
+</ResourceDictionary>
