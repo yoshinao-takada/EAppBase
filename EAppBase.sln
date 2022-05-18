@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{E828D3A5-A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HSM", "HSM", "{3A9496F5-72FE-4D2D-B359-1320B5629BA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoBind", "NoBind\NoBind.csproj", "{2EAC3828-D459-4B03-B077-6F4CE63FB23A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{DDF7B8A1-2D17-4360-8C7D-F18D160A3C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDF7B8A1-2D17-4360-8C7D-F18D160A3C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDF7B8A1-2D17-4360-8C7D-F18D160A3C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EAC3828-D459-4B03-B077-6F4CE63FB23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EAC3828-D459-4B03-B077-6F4CE63FB23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EAC3828-D459-4B03-B077-6F4CE63FB23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EAC3828-D459-4B03-B077-6F4CE63FB23A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
