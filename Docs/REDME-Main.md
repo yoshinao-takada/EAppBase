@@ -1,4 +1,4 @@
-@mainpageg Tookkit for Embedded WPF Applications
+@mainpage Tookkit for Embedded WPF Applications
 # Overview
 This toolkit helps develop WPF applications for embedded systems.
 Key features  
