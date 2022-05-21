@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace NoBind
 {
@@ -15,12 +9,25 @@ namespace NoBind
     {
         private IMainWindowExports _windowAPI = null;
         MainWindow _mainWindow;
+        /// <summary>
+        /// It is registered to ButtonAction of MainWindow.
+        /// This event handler only increment the counter but causes
+        /// many actions in MainWindow.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void ButtonAction(object sender, RoutedEventArgs e)
         {
             int i = _windowAPI.Counter;
             i++;
             _windowAPI.Counter = i;
         }
+
+        /// <summary>
+        /// Create a new instance of MainWindow and register this own event handler to
+        /// the instance.
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);

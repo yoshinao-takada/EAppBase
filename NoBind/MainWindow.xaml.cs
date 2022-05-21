@@ -5,10 +5,23 @@ using System.Windows.Media;
 
 namespace NoBind
 {
+    /// <summary>
+    /// The interface exported by MainWindow. External code accesses MainWindow via the
+    /// initerface. The interface does not contain anything directly related GUI;
+    /// e.g. Brush, Label, Thickness, etc.
+    /// </summary>
     public interface IMainWindowExports
     {
+        /// <summary>
+        /// This event triggers any external action by clicking the button at the bottom-left
+        /// of MainWindow.
+        /// </summary>
         event RoutedEventHandler ButtonAction;
 
+        /// <summary>
+        /// Incremented or decremented by external code. UI elements in MainWindow are
+        /// automatically updated.
+        /// </summary>
         int Counter { get; set; }
     }
 
@@ -18,6 +31,11 @@ namespace NoBind
     public partial class MainWindow : Window, IMainWindowExports
     {
         Random rand;
+
+        /// <summary>
+        /// MainWindow keeps a random number generator to create a color on each
+        /// click of the button. The random number generator is initialized here.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -28,6 +46,10 @@ namespace NoBind
         Label[] Labels = new Label[6];
 
         #region IMainWindowExports_Impl
+        /// <summary>
+        /// ButtonAction wraps the button click event of MyButton.
+        /// MyButton is a button declared in the XAML code, MyWindow.xaml.
+        /// </summary>
         event RoutedEventHandler IMainWindowExports.ButtonAction
         {
             add
@@ -42,6 +64,10 @@ namespace NoBind
 
 
         private int _counter = 0;
+
+        /// <summary>
+        /// Counter.set automatically render ShowCounter and Labels.
+        /// </summary>
         public int Counter
         {
             get => _counter;
@@ -58,6 +84,9 @@ namespace NoBind
         }
         #endregion
 
+        /// <summary>
+        /// It export MainWindow itself as an instance of an interface of IMainWindowExports.
+        /// </summary>
         public IMainWindowExports MyInterface
         {
             get => this as IMainWindowExports;
