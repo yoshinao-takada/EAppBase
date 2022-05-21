@@ -7,3 +7,10 @@ Key features
   a new template class of XAML definitions.
 * The toolkit offers a new programming style similar to QP of Quantum Leaps but less complicated
 because of help of WPF native functionalities.
+
+Table 1. Child contents of main page  
+name | descriptiono
+--|--
+[GUI-Interface.md](./GUI-Interface.md) | WPF GUIにinterfaceをつけるときのコツ
+[GUI-Top.md](./GUI-Top.md) | サンプルプログラム外観
+<br>
